@@ -5,14 +5,16 @@
  * Date: 20.07.2019
  * Time: 21:00
  */
+use yii\helpers\Html;
 ?>
 <div class="back2">
-    <div class="op">Регистрация</div>
-    <input type="text"  placeholder="E-mail">
-    <input type="text"  placeholder="Возраст">
-    <input type="text"  placeholder="ФИО">
-    <input type="text"  placeholder="О себе">
-    <input type="text"  placeholder="Пароль">
-    <input type="text"  placeholder="Повторите пароль">
-    <button></button>
+    <?php $form = ActiveForm::begin(); ?>
+    <?= $form->field($model, 'email') ?>
+    <?= $form->field($model, 'full_name') ?>
+    <?= $form->field($model, 'age') ?>
+    <?= $form->field($model, 'password')->passwordInput() ?>
+    <?= $form->field($model, 'repassword')->passwordInput() ?>
+    <?= $form->field($model, 'descriptions')->textarea(['rows' => '7'])?>
+    <?= Html::submitButton('Регистрация', ['class' => 'btn btn-success'])?>
+    <?php ActiveForm::end(); ?>
 </div>
