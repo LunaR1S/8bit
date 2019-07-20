@@ -9,6 +9,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\UserForm;
+use app\models\Userlist;
 
 class SiteController extends Controller
 {
@@ -71,16 +73,10 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+            $this->redirect('profile');
         }
-
-        $model->password = '';
         return $this->render('login', [
             'model' => $model,
         ]);
@@ -125,8 +121,20 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    public function actionRegistration()
-    {
-        return $this->render('registration');
+    public function actionRegistration(){
+        $model = new UserForm();
+
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+            $user = new Userlist();
+            $user->email=$model->email;
+            $user->full_name=$model->full_name;
+            $user->password= md5($model->password);
+            $user->age=$model->age;
+            $user->descriptions=$model->descriptions;
+            $user->save();
+        }
+        return $this->render('registration', [
+            'model' => $model,
+        ]);
     }
 }

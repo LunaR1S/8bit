@@ -2,8 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    background-color: #00172f;
+}
 .back{
-    background-image: linear-gradient(0deg, rgba(0,24,48,1), rgba(0,24,48,0)),
+    background-image: linear-gradient(0deg, rgba(0,24,48,1) 3%, rgba(0,24,48,0)),
         url('../images/sss.jpg') ;
     height: 100%;
     width: 100%;
@@ -13,7 +16,7 @@
     align-items: center
 }
 .back1{
-    background-image: linear-gradient(0deg, rgba(0,24,48,1), rgba(0,24,48,0)),
+    background-image: linear-gradient(0deg, rgba(0,24,48,1) 3%, rgba(0,24,48,0)),
     url('../images/qqq.jpg') ;
     height: 100%;
     background-size: cover;
@@ -23,7 +26,7 @@
     justify-content: center;
 }
 .back2{
-    background-image: linear-gradient(0deg, rgba(0,24,48,1), rgba(0,24,48,0)),
+    background-image: linear-gradient(50deg, rgba(0,24,48,1), rgba(0,24,48,0)),
     url('../images/bg1.jpg') ;
     height: 100%;
     background-size: cover;
@@ -44,7 +47,7 @@ html, body{
     top: 430px;
     color: white;
     border-radius:5px   ;
-    border: 2px solid orange;
+    border: 2px solid #e7ff00;
     background: none;
     font-size: 25px;
     padding: 10px;
@@ -55,7 +58,7 @@ html, body{
 .btn1{
     color: white;
     border-radius:3px;
-    border: 2px solid orange;
+    border: 2px solid #e7ff00;
     background: none;
     font-size: 25px;
     position: absolute;
@@ -89,7 +92,7 @@ html, body{
     font-size: 25px;
     border-radius: 5px;
     background: none;
-    border:2px solid orange;
+    border:2px solid #e7ff00;
     top: 35%;
     height:55px;
     left: 50%;
@@ -104,7 +107,7 @@ html, body{
     font-size: 25px;
     border-radius: 5px;
     background: none;
-    border:2px solid orange;
+    border:2px solid #e7ff00;
     top: 44%;
     height: 55px;
     left: 50%;
@@ -128,7 +131,7 @@ html, body{
     text-decoration: none;
     color: white;
     border-radius:5px;
-    border: 2px solid orange;
+    border: 2px solid #e7ff00;
     background: none;
     font-size: 30px;
     position: absolute;
@@ -152,7 +155,7 @@ html, body{
     top: 53%;
     background: none;
     border-radius:5px;
-    border: 2px solid orange;
+    border: 2px solid #e7ff00;
     color: white;
 }
 .line1{
@@ -168,7 +171,7 @@ html, body{
 }
 .hr1{
     width: 35%;
-    background-color: orange;
+    background-color: #e7ff00;
     height: 2px;
     border: 0px;
 }
@@ -190,3 +193,40 @@ html, body{
     font-size: 40px;
     color: white;
 }
+.form1{
+    margin-top: 60px;
+    width: 90%;
+    font-size: 20px;
+    color: white;
+}
+.form2{
+    margin-top: 45%;
+    width: 90%;
+    font-size: 20px;
+    color: white;
+}
+
+.reg1{
+    text-decoration: none;
+    color: white;
+    border-radius:5px;
+    border: 2px solid #e7ff00;
+    background: none;
+    font-size: 30px;
+    position: relative;
+    width: 90%;
+    height: 50px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+}
+.input3{
+    font-size: 25px;
+    border-radius: 5px;
+    background: none;
+    border:2px solid #e7ff00;
+    width: 100%;
+    height: 55px;
+}
+
