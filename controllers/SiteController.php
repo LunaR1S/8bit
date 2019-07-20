@@ -124,7 +124,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    
+
     public function actionRegistration(){
         $model = new UserForm();
 
@@ -141,11 +141,4 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-<<<<<<< HEAD
-    public function actionProfile()
-    {
-        return $this->render('profile');
-    }
-=======
->>>>>>> semenov_da
 }
