@@ -5,6 +5,8 @@
 $this->title = 'My Yii Application';
 ?>
  <div class="back">
-     <button class="btn"> Оставить заявку </button>
-     <button class="btn1"> Я Волонтёр</button>
+     <img src="../web/images/logo.png" class="img1" alt="" width="200"
+     height="200">
+     <button class="btnmain"> Оставить заявку </button>
+     <a class="btn1" href="/site/login">Я Волонтёр</a>
  </div>
