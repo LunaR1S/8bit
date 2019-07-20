@@ -30,7 +30,8 @@ class LoginForm extends Model
     public function CheckAccount($attribute, $params){
         if (!$this->hasErrors()) {
 
-            if (!Userlist::find()->where(['email'=>$this->email, 'password'=>$this->password])->one()) {
+
+            if (!Userlist::find()->where(['email'=>$this->email, 'password'=>md5($this->password)])->one()) {
                 $this->addError($attribute, 'Email или пароль не верны.');
             }
         }

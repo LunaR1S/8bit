@@ -4,6 +4,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
+    'language'=>'ru-RU',
     'id' => 'basic',
     'language' => 'ru-RU',
     'basePath' => dirname(__DIR__),
@@ -50,6 +51,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '' => 'site/index',
             ],
         ],
 

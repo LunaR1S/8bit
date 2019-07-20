@@ -12,6 +12,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\UserForm;
+use app\models\Userlist;
 
 class SiteController extends Controller
 {
@@ -122,7 +124,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
+    
     public function actionRegistration(){
         $model = new UserForm();
 
@@ -139,8 +141,11 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+<<<<<<< HEAD
     public function actionProfile()
     {
         return $this->render('profile');
     }
+=======
+>>>>>>> semenov_da
 }
