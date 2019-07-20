@@ -2,6 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\User;
+use app\models\UserForm;
+use app\models\Userlist;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -71,16 +74,10 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+            $this->redirect('profile');
         }
-
-        $model->password = '';
         return $this->render('login', [
             'model' => $model,
         ]);
@@ -124,5 +121,26 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionRegistration(){
+        $model = new UserForm();
+
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+            $user = new Userlist();
+            $user->email=$model->email;
+            $user->full_name=$model->full_name;
+            $user->password= md5($model->password);
+            $user->age=$model->age;
+            $user->descriptions=$model->descriptions;
+            $user->save();
+        }
+        return $this->render('registration', [
+            'model' => $model,
+        ]);
+    }
+    public function actionProfile()
+    {
+        return $this->render('profile');
     }
 }
