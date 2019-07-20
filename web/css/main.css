@@ -1,0 +1,94 @@
+.back{
+    background-image: linear-gradient(0deg, rgba(0,24,48,1), rgba(0,24,48,0)),
+        url('../images/sss.jpg') ;
+    height: 100%;
+    width: 100%;
+    background-position: 35% center ;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.back1{
+    background-image: linear-gradient(0deg, rgba(0,24,48,1), rgba(0,24,48,0)),
+    url('../images/qqq.jpg') ;
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+    background-position: 50% center ;
+    display: flex;
+    justify-content: center;
+
+}
+html, body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+.btn{
+color: white;
+    border-radius:5px   ;
+    border: 4px solid orange;
+    background: none;
+    font-size: 40px;
+}
+.btn:hover{
+    color: white;
+}
+.btn1{
+    color: white;
+    border-radius:5px   ;
+    border: 4px solid orange;
+    background: none;
+    font-size: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.op{
+    font-size: 55px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20%;
+}
+.input{
+    position: absolute;
+    font-size: 23px;
+    border-radius: 5px;
+    background: none;
+    border:4px solid orange;
+    margin: 1%;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input1{
+    position: absolute;
+    font-size: 23px;
+    border-radius: 5px;
+    background: none;
+    border:4px solid orange;
+    margin: 1%;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.zab{
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 290px;
+}
+.reg{
+    color: white;
+    border-radius:5px   ;
+    border: 3px solid orange;
+    background: none;
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
